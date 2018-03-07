@@ -2,9 +2,14 @@
 - 使用[async-validator](https://www.npmjs.com/package/async-validator)进行校验
 - 返回Promise
 
+## 安装
+```sh
+npm install @laomu/validator
+```
+
 ## usage
 ```js
-let Validate = require('@laomu/validate')
+let Validate = require('@laomu/validator')
 let rules = {
     username: [
         {type: 'string', required: true, message: '请输入用户名'},
@@ -38,3 +43,6 @@ validator
 * instance.validExist(data) 校验数据中存在的属性（可枚举并在rules中定义过）
 * instance.validAttr(data, attr) 校验一个属性, 例如validAttrs(data, 'username')
 * instance.validAttrs(data, attrs) 校验属性列表，例如validAttrs(data, ['username', 'password'])
+
+## 其他
+rule配置规则请参考[async-validator](https://www.npmjs.com/package/async-validator)
